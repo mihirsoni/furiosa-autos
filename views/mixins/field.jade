@@ -1,0 +1,5 @@
+mixin field(type, name, label, value)
+  .form-group
+    label(for=name) #{label} :
+    input(id=name, class='form-control' name=name,type=type,value=value)
+
