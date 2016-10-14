@@ -1,11 +1,12 @@
 extends _shared
-
+include mixins/field
 block body
+	form(class='form-inline', action='/reviews',method='post')
+		mixin field('text', 'search', 'Search', searchText)
+		input(type='submit', class='btn btn-default' value='Search')
 	.reviews
 		h2 Customer reviews
-
 		//- Implement search here
-
 		for review in reviews
 			blockquote
 				p= review.content
